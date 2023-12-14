@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Udate</title>
+</head>
+<body>
+ <form action="" method="post">
+     {% csrf_token %}
+     <div>
+         <p>Имя</p>
+         <input type="text" name="name" value="{{ men.name }}">
+     </div>
+     <div>
+         <p>Возраст</p>
+         <input type="number" name="age" value="{{ men.age }}">
+     </div>
+     <button>Send</button>
+ </form>
+</body>
+</html>

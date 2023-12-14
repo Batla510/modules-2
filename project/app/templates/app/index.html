@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <a href="{% url 'create'%}">Добавить</a>
+    </div>
+    {% for men in people %}
+    <h1>{{ men.name }}</h1>
+    <p>{{ men.age }}</p>
+    <div>
+        <a href="{% url 'user' men.id %}">Подробнее</a>
+        <a href="{% url 'update' men.id %}">Редактировать</a>
+        <a href="{% url 'delete' men.id %}">Удалить</a>
+    </div>
+    <hr>
+    {% endfor %}
+    <p>{{ chel }} человек</p>
+</body>
+</html>
